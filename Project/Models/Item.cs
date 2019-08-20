@@ -7,5 +7,11 @@ namespace CastleGrimtol.Project.Models
       {
             public string Name { get; set; }
             public string Description { get; set; }
+
+            //TODO see room for example to create constructor
+            public Item(string name, string description)
+            {
+
+            }
       }
 }

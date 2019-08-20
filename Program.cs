@@ -1,5 +1,6 @@
 ﻿using System;
 using CastleGrimtol.Project;
+using CastleGrimtol.Project.Models;
 
 namespace CastleGrimtol
 {
@@ -11,22 +12,21 @@ namespace CastleGrimtol
                   Console.Clear();
                   Console.WriteLine("Hello World");
                   GameService gameService = new GameService();
-                  gameService.newUser = newUser();
-                  System.Console.WriteLine("Welcome, Login please");
-                  {
-                        Console.Write("Name:");
-                        string name = Console.ReadLine().ToLower();
-                        if (gameService.Login(name))
-                        {
-                              System.Console.WriteLine($"Ready...?{app.Activeuser.Name}");
-                              loggedOut = false;
-                        }
-                        else
-                        {
-                              Console.Clear();
-                              System.Console.WriteLine("Invalid Credentials");
-                        }
-                  }
+                  // gameService.newUser = new User(); USE PLAYER
+
+                  //TODO Move this to 'setup'
+
+                  // if (gameService.Login(name))
+                  // {
+                  //       System.Console.WriteLine($"Ready...?{app.Activeuser.Name}");
+                  //       loggedOut = false;
+                  // }
+                  // else
+                  // {
+                  //       Console.Clear();
+                  //       System.Console.WriteLine("Invalid Credentials");
+                  // }
+
                   gameService.Setup();
                   gameService.StartGame();
             }
